@@ -1,0 +1,41 @@
+name: 🚀 Auto Move Issues in Kanban
+
+on:
+  issues:
+    types: [opened, labeled, unlabeled]
+
+jobs:
+  move_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔄 Move Issue Based on Labels
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const columnMap = {
+              "To Do": "📝 To Do",
+              "In Progress": "🔄 In Progress",
+              "Done": "✅ Done",
+              "Bug Fix": "🛠 Bugs & Fixes",
+              "API Development": "📊 API Development",
+              "Machine Learning": "🤖 Machine Learning",
+              "Notifications": "📩 Notifications",
+              "Deployment": "🚀 Deployment & Hosting",
+              "Automation": "🛠 Automation"
+            };
+
+            const issue = context.payload.issue;
+            const labels = issue.labels.map(label => label.name);
+            const projectID = "YOUR_PROJECT_ID";  // Replace with your GitHub Project ID
+
+            for (const label of labels) {
+              if (columnMap[label]) {
+                github.projects.createCard({
+                  column_id: projectID,
+                  content_id: issue.id,
+                  content_type: "Issue"
+                });
+                break;
+              }
+            }
