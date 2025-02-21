@@ -114,6 +114,7 @@ python telegram_bot.py
 
 📬 Contact & Contribution
 
-👨‍💻 Developed by Leonardo Trindade📧 Email: leotavo@gmail.com🔗 LinkedIn: Leonardo Trindade
+👨‍💻 Developed by Leonardo Trindade📧 Email: leotavo@gmail.com
+🔗 LinkedIn: [Leonardo Trindade](https://www.linkedin.com/in/leotavo/)
 
 🙌 Contributions are welcome! Feel free to fork, improve, and submit pull requests.
