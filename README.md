@@ -36,7 +36,12 @@ Telegram Bot API (Automated Trade Alerts)
 
 📂 swing-trade-recommendation/
 
-├── README.md → Documentation & Project Overview├── colab_script.py → AI Model for Trade Recommendations├── api.py → FastAPI Service for Fetching Recommendations├── telegram_bot.py → Script for Sending Telegram Alerts├── .github/workflows/schedule.yml → GitHub Actions for Automation└── requirements.txt → Python Dependencies
+├── README.md → Documentation & Project Overview
+├── colab_script.py → AI Model for Trade Recommendations
+├── api.py → FastAPI Service for Fetching Recommendations
+├── telegram_bot.py → Script for Sending Telegram Alerts
+├── .github/workflows/schedule.yml → GitHub Actions for Automation
+└── requirements.txt → Python Dependencies
 
 📌 How It Works
 
@@ -103,7 +108,9 @@ python telegram_bot.py
 
 🚀 Next Steps & Improvements
 
-✅ Add Backtesting Capabilities to validate strategies.✅ Improve Machine Learning Algorithms for trade predictions.✅ Create a Web Dashboard for real-time trade tracking.
+✅ Add Backtesting Capabilities to validate strategies.
+✅ Improve Machine Learning Algorithms for trade predictions.
+✅ Create a Web Dashboard for real-time trade tracking.
 
 📬 Contact & Contribution
 
